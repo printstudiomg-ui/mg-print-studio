@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="M&G PRINT STUDIO - Capturăm, imprimăm, personalizăm.">
+  <title>M&G PRINT STUDIO</title>
+  <link rel="icon" href="logo.png" type="image/png">
+
+  <style>
+    :root {
+      --bg: #000;
+      --text: #fff;
+      --muted: #d6d6d6;
+      --line: rgba(255, 255, 255, 0.28);
+      --card: rgba(255, 255, 255, 0.045);
+      --button: rgba(255, 255, 255, 0.07);
+      --button-hover: rgba(255, 255, 255, 0.13);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #000;
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 22px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 470px;
+      animation: show 0.65s ease both;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 30px 22px 24px;
+      background: var(--card);
+      text-align: center;
+      box-shadow: 0 22px 70px rgba(255,255,255,0.06);
+    }
+
+    .logo {
+      width: min(210px, 60vw);
+      height: auto;
+      display: block;
+      margin: 0 auto 18px;
+      object-fit: contain;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(27px, 6vw, 36px);
+      letter-spacing: 1px;
+      line-height: 1.05;
+      color: #fff;
+    }
+
+    .slogan {
+      margin: 0 0 10px;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      margin: 0 0 25px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .links {
+      display: grid;
+      gap: 13px;
+    }
+
+    .btn {
+      min-height: 66px;
+      display: grid;
+      grid-template-columns: 54px 1fr 22px;
+      align-items: center;
+      gap: 13px;
+      padding: 12px 17px;
+      color: #fff;
+      text-decoration: none;
+      background: var(--button);
+      border: 1px solid rgba(255,255,255,0.38);
+      border-radius: 20px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.12);
+      transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+    }
+
+    .btn:hover,
+    .btn:focus {
+      transform: translateY(-2px);
+      background: var(--button-hover);
+      border-color: rgba(255,255,255,0.75);
+    }
+
+    .icon {
+      font-size: 34px;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .label {
+      text-align: left;
+    }
+
+    .label strong {
+      display: block;
+      font-size: 20px;
+      line-height: 1.1;
+      color: #fff;
+    }
+
+    .label span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 15px;
+      word-break: break-word;
+    }
+
+    .arrow {
+      font-size: 30px;
+      line-height: 1;
+      color: #fff;
+    }
+
+    .review {
+      border-color: rgba(255,255,255,0.70);
+      background: rgba(255,255,255,0.095);
+    }
+
+    .footer {
+      margin: 22px 0 0;
+      color: #fff;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .small {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    @keyframes show {
+      from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.985);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @media (max-width: 390px) {
+      body {
+        padding: 14px;
+      }
+
+      .card {
+        padding: 24px 15px 20px;
+        border-radius: 24px;
+      }
+
+      .btn {
+        grid-template-columns: 46px 1fr 18px;
+        min-height: 62px;
+        padding: 10px 13px;
+        gap: 10px;
+        border-radius: 17px;
+      }
+
+      .icon {
+        font-size: 30px;
+      }
+
+      .label strong {
+        font-size: 18px;
+      }
+
+      .label span {
+        font-size: 14px;
+      }
+
+      .arrow {
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="card">
+      <img class="logo" src="logo.png" alt="Logo M&G PRINT STUDIO">
+
+      <h1>M&amp;G PRINT STUDIO</h1>
+      <p class="slogan">Capturăm, imprimăm, personalizăm.</p>
+      <p class="subtitle">Alege unde vrei să ne găsești:</p>
+
+      <div class="links">
+        <a class="btn" href="https://www.facebook.com/mgprintstudio" target="_blank" rel="noopener noreferrer">
+          <span class="icon">📘</span>
+          <span class="label"><strong>Facebook</strong><span>/mgprintstudio</span></span>
+          <span class="arrow">›</span>
+        </a>
+
+        <a class="btn" href="https://www.instagram.com/printstudiomg/" target="_blank" rel="noopener noreferrer">
+          <span class="icon">📸</span>
+          <span class="label"><strong>Instagram</strong><span>@printstudiomg</span></span>
+          <span class="arrow">›</span>
+        </a>
+
+        <a class="btn" href="https://tiktok.com/@mgprintstudio" target="_blank" rel="noopener noreferrer">
+          <span class="icon">🎵</span>
+          <span class="label"><strong>TikTok</strong><span>@mgprintstudio</span></span>
+          <span class="arrow">›</span>
+        </a>
+
+        <a class="btn review" href="https://g.page/r/CX3_1EP6NiJ4EAE/review" target="_blank" rel="noopener noreferrer">
+          <span class="icon">⭐</span>
+          <span class="label"><strong>Recenzii Google</strong><span>Lasă-ne o recenzie</span></span>
+          <span class="arrow">›</span>
+        </a>
+
+        <a class="btn" href="https://wa.me/40752754289" target="_blank" rel="noopener noreferrer">
+          <span class="icon">💬</span>
+          <span class="label"><strong>WhatsApp</strong><span>0752 754 289</span></span>
+          <span class="arrow">›</span>
+        </a>
+
+        <a class="btn" href="mailto:printstudiomg@gmail.com">
+          <span class="icon">✉️</span>
+          <span class="label"><strong>E-mail</strong><span>printstudiomg@gmail.com</span></span>
+          <span class="arrow">›</span>
+        </a>
+      </div>
+
+      <p class="footer">
+        Mulțumim că ne-ai ales! 🤍
+        <span class="small">Capturăm • Imprimăm • Personalizăm</span>
+      </p>
+    </section>
+  </main>
+</body>
+</html>
